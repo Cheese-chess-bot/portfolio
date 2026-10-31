@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B192C">
+  <meta
+    name="description"
+    content="Amitendra’s personal notebook of code, electronics, AI experiments, chess, and life away from the keyboard."
+  >
+
+  <title>Amitendra / A work in progress</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <a class="signature" href="#main" aria-label="Back to top">
+      amitendra<span>.</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#about">The person</a>
+      <a href="#elsewhere">
+        Elsewhere <span aria-hidden="true">↗</span>
+      </a>
+    </nav>
+
+    <span class="edition">PERSONAL INDEX / 2026</span>
+  </header>
+
+  <main id="main">
+    <section class="opening" aria-labelledby="opening-title">
+      <div class="opening-margin">
+        <span class="label">Kolkata, India</span>
+        <span class="vertical-note">
+          A NOTEBOOK, NOT A FINISHED PRODUCT
+        </span>
+      </div>
+
+      <div class="opening-copy">
+        <p class="label intro-label">
+          Student / programmer / hands-on learner
+        </p>
+
+        <h1 id="opening-title">
+          Taking things<br>
+          apart.<br>
+          <em>Making them</em><br>
+          <em>my own.</em>
+        </h1>
+
+        <div class="opening-bottom">
+          <p>
+            I’m Amitendra, a 13-year-old building across code,
+            circuits, and machine learning. Usually following a question.
+            Occasionally creating three more.
+          </p>
+
+          <a
+            class="round-link"
+            href="#work"
+            aria-label="Explore selected work"
+          >
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </div>
+
+      <aside class="margin-note">
+        <span class="note-number" aria-hidden="true">01—06</span>
+
+        <p>
+          Flight controllers.<br>
+          Small language models.<br>
+          Cars made of code.
+        </p>
+
+        <span class="label">
+          Different projects.<br>
+          The same curiosity.
+        </span>
+      </aside>
+    </section>
+
+    <section
+      class="work section"
+      id="work"
+      aria-labelledby="work-title"
+    >
+      <div class="section-heading">
+        <p class="label">01 / Selected work</p>
+
+        <h2 id="work-title">
+          Things on<br>
+          <em>my workbench.</em>
+        </h2>
+
+        <p class="section-caption">
+          Experiments, prototypes, and ideas that are still finding their shape.
+        </p>
+      </div>
+
+      <div class="work-toolbar" hidden>
+        <div
+          class="filters"
+          role="group"
+          aria-label="Filter projects"
+        >
+          <button
+            type="button"
+            data-filter="all"
+            aria-pressed="true"
+          >
+            Everything
+          </button>
+
+          <button
+            type="button"
+            data-filter="hardware"
+            aria-pressed="false"
+          >
+            Hardware
+          </button>
+
+          <button
+            type="button"
+            data-filter="ai"
+            aria-pressed="false"
+          >
+            AI &amp; ML
+          </button>
+
+          <button
+            type="button"
+            data-filter="software"
+            aria-pressed="false"
+          >
+            Software
+          </button>
+        </div>
+
+        <p
+          class="result-count"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          06 projects
+        </p>
+      </div>
+
+      <div class="project-list">
+        <article
+          class="project project-lead"
+          data-category="hardware"
+        >
+          <span class="project-index">01</span>
+
+          <div class="project-main">
+            <p class="label">Hardware / In development</p>
+
+            <h3>
+              Learning<br>
+              to leave<br>
+              <em>the ground.</em>
+            </h3>
+
+            <p>
+              A custom micro quadcopter built around an ESP32-S3.
+              Coreless motors, an MPU-6050, MOSFET drivers, and
+              3D-printed parts—with plenty to figure out between
+              the code and the workbench.
+            </p>
+
+            <ul class="tags" aria-label="Technologies">
+              <li>ESP32-S3</li>
+              <li>C++</li>
+              <li>Motor control</li>
+            </ul>
+
+            <details>
+              <summary>
+                Open build notes
+                <span aria-hidden="true">+</span>
+              </summary>
+
+              <div class="detail-copy">
+                <p>
+                  The board has 16 MB flash and 8 MB PSRAM.
+                  My work includes camera and IMU testing, motor control,
+                  and a dedicated flight-control loop.
+                  Flight testing and tuning remain part of development.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <figure class="flight-study">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 400 400"
+              role="img"
+              aria-labelledby="drone-title drone-desc"
+            >
+              <title id="drone-title">
+                Micro quadcopter design study
+              </title>
+
+              <desc id="drone-desc">
+                Four rotor circles connected to a central controller.
+                An illustrative drawing, not a wiring diagram.
+              </desc>
+
+              <g class="drawing-guides">
+                <path d="M40 200H360M200 40V360"/>
+                <circle cx="200" cy="200" r="155"/>
+                <path d="M76 60H324M76 54V66M324 54V66"/>
+              </g>
+
+              <g class="drawing-frame">
+                <path d="M112 112L288 288M288 112L112 288"/>
+              </g>
+
+              <g class="drawing-rotors">
+                <circle cx="112" cy="112" r="53"/>
+                <circle cx="288" cy="112" r="53"/>
+                <circle cx="112" cy="288" r="53"/>
+                <circle cx="288" cy="288" r="53"/>
+
+                <path
+                  d="M78 112H146M112 78V146M254 112H322M288 78V146M78 288H146M112 254V322M254 288H322M288 254V322"
+                />
+              </g>
+
+              <rect
+                class="drawing-board"
+                x="170"
+                y="157"
+                width="60"
+                height="86"
+                rx="2"
+              />
+
+              <g class="drawing-pins">
+                <path
+                  d="M160 172H170M160 188H170M160 204H170M160 220H170M230 172H240M230 188H240M230 204H240M230 220H240"
+                />
+              </g>
+
+              <text x="200" y="195" text-anchor="middle">
+                ESP32
+              </text>
+
+              <text x="200" y="213" text-anchor="middle">
+                S3
+              </text>
+
+              <text
+                class="dimension-label"
+                x="200"
+                y="48"
+                text-anchor="middle"
+              >
+                MICRO QUADCOPTER
+              </text>
+            </svg>
+
+            <figcaption>
+              <span>FIG. 01 / FLIGHT STUDY</span>
+              <span>Illustration, not to scale</span>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="project" data-category="ai">
+          <span class="project-index">02</span>
+
+          <div class="project-main">
+            <p class="label">AI + security / In development</p>
+            <h3>Ghost</h3>
+
+            <p>
+              Exploring a multi-agent security research framework with
+              llama.cpp and specialized Qwen models. A project about local
+              inference, inspectable reasoning, and authorized research.
+            </p>
+
+            <ul class="tags" aria-label="Technologies">
+              <li>Python</li>
+              <li>Local models</li>
+              <li>Security research</li>
+            </ul>
+
+            <details>
+              <summary>
+                Open research notes
+                <span aria-hidden="true">+</span>
+              </summary>
+
+              <div class="detail-copy">
+                <p>
+                  I’m exploring how agents can divide research tasks and
+                  compare their reasoning. Alongside this, I practice
+                  web exploitation and reverse engineering through picoCTF.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <div class="project-aside">
+            <span class="label">The question</span>
+            <p>
+              Can a group of small models make a useful research partner?
+            </p>
+          </div>
+        </article>
+
+        <article class="project" data-category="ai">
+          <span class="project-index">03</span>
+
+          <div class="project-main">
+            <p class="label">
+              Machine learning / Built &amp; fine-tuned
+            </p>
+
+            <h3>
+              A small GPT.<br>
+              <em>A closer look.</em>
+            </h3>
+
+            <p>
+              A local 20-million-parameter Mini-GPT experiment built and
+              fine-tuned on a laptop. My way of getting closer to
+              architecture, training, and what happens inside a model.
+            </p>
+
+            <ul class="tags" aria-label="Technologies">
+              <li>Python</li>
+              <li>Language models</li>
+              <li>Fine-tuning</li>
+            </ul>
+          </div>
+
+          <div class="project-aside parameter-note">
+            <strong>20<span>M</span></strong>
+            <span class="label">
+              Parameters.<br>
+              Plenty to learn.
+            </span>
+          </div>
+        </article>
+
+        <article class="project" data-category="software">
+          <span class="project-index">04</span>
+
+          <div class="project-main">
+            <p class="label">Game physics / Experiments</p>
+
+            <h3>
+              Built for<br>
+              <em>the next corner.</em>
+            </h3>
+
+            <p>
+              Racing physics, chassis simulations, and procedural track
+              generators in Roblox Studio. In TORCS, I’m also exploring
+              autonomous driving and how a simulated driver can improve.
+            </p>
+
+            <ul class="tags" aria-label="Technologies">
+              <li>Luau</li>
+              <li>Roblox Studio</li>
+              <li>TORCS</li>
+            </ul>
+          </div>
+
+          <div class="project-aside">
+            <span class="label">Ongoing fascination</span>
+            <p>
+              The gap between a car that moves and a car that feels right.
+            </p>
+          </div>
+        </article>
+
+        <article class="project" data-category="ai">
+          <span class="project-index">05</span>
+
+          <div class="project-main">
+            <p class="label">
+              Computer vision / Trained prototypes
+            </p>
+
+            <h3>BatchGuard</h3>
+
+            <p>
+              PCB anomaly-detection experiments trained on Kaggle.
+              Looking for defects while learning how dust, subtle changes,
+              and unfamiliar boards complicate visual inspection.
+            </p>
+
+            <ul class="tags" aria-label="Technologies">
+              <li>Computer vision</li>
+              <li>Kaggle</li>
+              <li>PCB inspection</li>
+            </ul>
+          </div>
+
+          <div class="project-aside">
+            <span class="label">The challenge</span>
+            <p>Knowing which tiny difference actually matters.</p>
+          </div>
+        </article>
+
+        <article class="project" data-category="software">
+          <span class="project-index">06</span>
+
+          <div class="project-main">
+            <p class="label">Quant research / In development</p>
+            <h3>Jevie</h3>
+
+            <p>
+              A paper-trading research bot exploring technical indicators,
+              backtesting, and model-driven decisions. A simulated
+              environment for testing ideas and examining their failures.
+            </p>
+
+            <ul class="tags" aria-label="Technologies">
+              <li>Python</li>
+              <li>RSI / SMA / EMA</li>
+              <li>Paper trading</li>
+            </ul>
+          </div>
+
+          <div class="project-aside">
+            <span class="label">Research principle</span>
+            <p>An interesting strategy still needs evidence.</p>
+          </div>
+        </article>
+      </div>
+
+      <a
+        class="text-link repository-link"
+        href="https://github.com/Cheese-chess-bot"
+      >
+        Explore my GitHub
+        <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+    <section
+      class="about section"
+      id="about"
+      aria-labelledby="about-title"
+    >
+      <div class="about-heading">
+        <p class="label">02 / The person</p>
+
+        <h2 id="about-title">
+          More than<br>
+          <em>the projects.</em>
+        </h2>
+      </div>
+
+      <div class="about-copy">
+        <p class="standfirst">
+          I like understanding the systems underneath the things I use.
+        </p>
+
+        <p>
+          Sometimes that means writing Python. Sometimes it means wiring
+          a sensor, tuning racing physics in Luau, or working inside Linux
+          on a phone. I move between software and hardware because both
+          give me something different to learn.
+        </p>
+
+        <aside
+          class="personal-note"
+          aria-labelledby="adhd-title"
+        >
+          <p class="label">A personal note</p>
+          <h3 id="adhd-title">I have ADHD.</h3>
+
+          <p>
+            It’s part of my story, alongside being a student, programmer,
+            tennis player, chess enthusiast, and someone who loves making things.
+            This site is a place for what I’m building and learning along the way.
+          </p>
+        </aside>
+      </div>
+
+      <div class="toolkit">
+        <h3>A few familiar tools</h3>
+
+        <dl>
+          <div>
+            <dt>Languages</dt>
+            <dd>Python, C++, Luau</dd>
+          </div>
+
+          <div>
+            <dt>Hardware</dt>
+            <dd>ESP32, sensors, motor control</dd>
+          </div>
+
+          <div>
+            <dt>Environments</dt>
+            <dd>Linux, WSL, Termux, UserLAnd</dd>
+          </div>
+
+          <div>
+            <dt>Workspaces</dt>
+            <dd>Kaggle, Colab, Replit, Codespaces</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section
+      class="offscreen section"
+      aria-labelledby="offscreen-title"
+    >
+      <div class="section-heading">
+        <p class="label">03 / Off-screen &amp; after hours</p>
+
+        <h2 id="offscreen-title">
+          Close the laptop.<br>
+          <em>Keep exploring.</em>
+        </h2>
+      </div>
+
+      <div class="interests">
+        <article class="interest interest-tennis">
+          <span class="interest-number">/ 01</span>
+
+          <h3>
+            A different<br>
+            kind of rally.
+          </h3>
+
+          <p>
+            Competitive tennis. Baseline tactics, serve-and-volley,
+            and thinking about the next shot.
+          </p>
+
+          <span class="interest-footer">ON THE COURT</span>
+        </article>
+
+        <div class="interest-notes">
+          <article>
+            <span class="label">/ 02 — Outside</span>
+            <h3>Room to move.</h3>
+
+            <p>
+              Cycling, movement, and a change of scenery away from the screen.
+            </p>
+          </article>
+
+          <article>
+            <span class="label">/ 03 — In-game</span>
+            <h3>One more round.</h3>
+
+            <p>
+              Roblox Rivals, TrackMania Nations Forever,
+              Rocket League, and Minecraft.
+            </p>
+          </article>
+
+          <article>
+            <span class="label">/ 04 — At the board</span>
+            <h3>One move deeper.</h3>
+
+            <p>
+              Chess is another interest of mine—a different kind of challenge
+              from coding, building, and playing tennis.
+            </p>
+          </article>
+        </div>
+
+        <aside class="soundtrack">
+          <p class="label">In the headphones</p>
+
+          <ul class="artist-list">
+            <li>One Direction</li>
+            <li>Imagine Dragons</li>
+            <li>Maroon 5</li>
+            <li>5 Seconds of Summer</li>
+            <li>Alan Walker</li>
+            <li>Marshmello</li>
+            <li>Charlie Puth</li>
+            <li>Ed Sheeran</li>
+            <li>Ava Max</li>
+            <li>The Kid LAROI</li>
+            <li>Justin Bieber</li>
+            <li>Sia</li>
+            <li>The Chainsmokers</li>
+            <li>Aaron Smith</li>
+          </ul>
+
+          <p class="soundtrack-note">
+            And brown noise for focused build sessions.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section
+      class="elsewhere section"
+      id="elsewhere"
+      aria-labelledby="elsewhere-title"
+    >
+      <p class="label">04 / Follow along</p>
+
+      <div class="elsewhere-content">
+        <h2 id="elsewhere-title">
+          Still a<br>
+          <em>work in progress.</em>
+        </h2>
+
+        <div>
+          <p>
+            Code, experiments, and whatever I decide to understand next.
+          </p>
+
+          <a
+            class="primary-link"
+            href="https://github.com/Cheese-chess-bot"
+          >
+            Find me on GitHub
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="signature" href="#main" aria-label="Back to top">
+      amitendra<span>.</span>
+    </a>
+
+    <p>
+      © <span id="year">2026</span> · Built with GitHub Pages.
+    </p>
+
+    <a class="back-top" href="#main">
+      Back to the beginning ↑
+    </a>
+  </footer>
+</body>
+</html>
